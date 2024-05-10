@@ -1,0 +1,10 @@
+
+
+.home-content {
+    background-image: url('../../public/images/main-bg.jpg');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Positions the background image at the center */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    height: 100vh;
+
+}
