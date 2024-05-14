@@ -1,6 +1,9 @@
 import HomeSidebar from "@/components/HomeSidebar";
 import "../styles/home.css";
 import HomeCard from "@/components/HomeCards";
+import TestimonialSlider from "@/components/TestimonialSlider";
+import SlickSlider from "@/components/TestimonialSlider";
+import Slider from "@/components/TestimonialSlider";
 
 
 export default function Home() {
@@ -31,18 +34,21 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="home-card w-full flex max-lg:flex-col gap-10 max-lg:gap-56 px-16 py-20">
+      <div className="home-card w-full flex max-lg:flex-col gap-10 max-lg:gap-56 px-16 max-sm:px-8 py-20">
         <div className=" h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-56 rounded-2xl"></div>
         <div className=" h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-56 rounded-2xl"></div>
       </div>
-      <div className=" w-full h-full py-24 text-white px-14">
+      <div className=" w-full h-auto py-24 text-white px-14">
         <h1 className=" text-2xl">SERVICES</h1>
         <p className=" text-5xl my-5">We are a creative agency and offers <br/> Services in various technologies</p>
         <div className="mt-16"><HomeSidebar /></div>
       </div>
 
-      <div className=" my-40 py-28">
+      <div className=" w-full h-auto text-white my-20 py-28">
         <HomeCard />
+      </div>
+      <div className="py-20 px-10">
+        <Slider/>
       </div>
     </div>
   );

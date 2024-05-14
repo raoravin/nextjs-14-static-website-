@@ -4,6 +4,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import "../styles/header.css"
 
 const Sidebar = ({ buttons,activeButtonId,setActiveButton }) => {
   return (
