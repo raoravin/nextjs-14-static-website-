@@ -83,10 +83,10 @@ const Content = ({ buttons, activeButtonId }) => {
                 <div className="mt-10">
                   {activeButton.content[activeContentButtonIndex].headings.map((heading, headingIndex) => (
                     <div className="my-4" key={headingIndex}>
-                      <h1 className="text-xl max-lg:text-lg max-md:text-base">{heading}</h1>
+                      <h1 className="text-2xl max-lg:text-lg max-md:text-base">{heading}</h1>
                       <ul className="pl-8 list-disc">
                         {activeButton.content[activeContentButtonIndex].lists[headingIndex].map((item, itemIndex) => (
-                          <li className="text-xl max-lg:text-base max-md:text-normal" key={itemIndex}>
+                          <li className=" xl:text-lg 2xl:text-xl max-lg:text-base max-md:text-normal xl:mt-2" key={itemIndex}>
                             {item}
                           </li>
                         ))}
@@ -94,7 +94,7 @@ const Content = ({ buttons, activeButtonId }) => {
                     </div>
                   ))}
                 </div>
-               <div className=" mt-10 border"> <Link href={activeButton.href} className=" text-blue-600 ">See More... </Link></div>
+               <div className=" mt-10 max-lg:mt-5 text-lg"> <Link href={activeButton.href} className=" text-blue-600 ">See More... </Link></div>
               </div>
             ) : (
               <div>
