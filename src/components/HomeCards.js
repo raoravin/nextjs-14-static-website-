@@ -58,7 +58,7 @@ const cardsData = [
 
 const Card = ({ card }) => {
   return (
-    <div className="border h-40 border-gray-300 rounded-md p-4">
+    <div className="border max-sm:h-32 max-xl:h-36  h-40 border-gray-300 rounded-md p-4">
       <h3 className="text-lg font-semibold">{card.title}</h3>
       <p className="text-sm text-gray-600">{card.description}</p>
       <p className="text-xs text-gray-400 mt-2">{card.date}</p>
@@ -68,7 +68,7 @@ const Card = ({ card }) => {
 
 const CardsContainer = ({ cards }) => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 gap-4">
+    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 max-sm:gap-10 max-lg:gap-20 max-xl:gap-5 gap-10">
       {cards.map((card) => (
         <Card key={card.id} card={card} />
       ))}
@@ -80,7 +80,7 @@ const HomeCard = () => {
   const [cards] = useState(cardsData);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className=" max-sm:px-4 px-10 py-8">
       <h1 className="text-3xl font-semibold mb-4">Industries</h1>
       <p className=" text-4xl font-semibold mb-5 py-2">Our Vision to Caters to Diverse Industry Demands</p>
       <CardsContainer cards={cards} />

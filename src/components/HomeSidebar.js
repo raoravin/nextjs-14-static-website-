@@ -5,21 +5,39 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import "../styles/header.css"
+import { LiaExternalLinkAltSolid } from "react-icons/lia";
+
 
 const Sidebar = ({ buttons,activeButtonId,setActiveButton }) => {
   return (
-    <div className="sidebar text-white flex flex-col gap-5">
+    <>
+    <div className="sidebar text-white flex flex-col gap-5 max-lg:gap-8 max-md:hidden">
       {buttons.map((button) => (
         <button
           key={button.id}
           onClick={() => setActiveButton(button.id)}
-          className={`min-w-60 p-6 rounded-md bg-gray-800 font-medium text-lg  ${button.id === activeButtonId ? 'border-2 border-blue-500' : ''}`}
+          className={` lg:min-w-60 p-6 max-lg:w-48 max-lg:px-1 max-lg:py-3 rounded-md bg-gray-800 font-medium text-xl max-lg:text-base  ${button.id === activeButtonId ? 'border-2 border-blue-500' : ''}`}
         >
             
           {button.label}
         </button>
       ))}
     </div>
+    <div className="hidden max-md:block mx-auto">
+    <div className="grid grid-cols-2 gap-5">
+        {buttons.map((button) => (
+          <Link
+            href={button.href}
+            key={button.id}
+            onClick={() => setActiveButton(button.id)}
+            className={`min-w-36 flex items-center justify-between gap-5 p-5 max-sm:p-3 rounded-md bg-gray-800 font-medium`}
+          >
+            <span className="">{button.label}</span> <span className=""><LiaExternalLinkAltSolid /></span>
+          </Link>
+        ))}
+      </div>
+    </div>
+    </>
   );
 };
 
@@ -40,15 +58,15 @@ const Content = ({ buttons, activeButtonId }) => {
     };
   
     return (
-      <div className="content text-white">
+      <div className="content text-white max-md:hidden">
         {activeButton?.content && (
           <div>
             {activeButton.content.length > 0 ? (
               <div>
                 <div className="">
-                  <h1 className="pb-10 text-4xl font-semibold">{activeButton.content_label}</h1>
+                  <h1 className="pb-10 text-4xl max-lg:text-2xl font-semibold">{activeButton.content_label}</h1>
                 </div>
-                <div className="content-buttons h-12 flex items-center justify-center p-1 px-5 gap-8  w-fit rounded-lg bg-slate-700">
+                <div className="content-buttons h-12 max-lg:h-10 flex items-center justify-center p-1 px-5 gap-8 max-lg:gap-5  w-fit rounded-lg bg-slate-700">
                   {activeButton.content.map((section, index) => (
                     <button
                       key={index}
@@ -56,7 +74,7 @@ const Content = ({ buttons, activeButtonId }) => {
                         handleContentButtonChange(index);
                         handleContentChange(0);
                       }}
-                      className={`py-3 ${index === activeContentButtonIndex ? ' border-b-4 rounded-sm text-white' : 'bg-gray-700 text-white'}`}
+                      className={`py-2.5 max-lg:py-1 ${index === activeContentButtonIndex ? ' border-b-4 rounded-sm text-white' : 'bg-gray-700 text-white'}`}
                     >
                       Button {index + 1}
                     </button>
@@ -65,10 +83,10 @@ const Content = ({ buttons, activeButtonId }) => {
                 <div className="mt-10">
                   {activeButton.content[activeContentButtonIndex].headings.map((heading, headingIndex) => (
                     <div className="my-4" key={headingIndex}>
-                      <h1 className="text-xl">{heading}</h1>
-                      <ul className="px-8 list-disc">
+                      <h1 className="text-xl max-lg:text-lg max-md:text-base">{heading}</h1>
+                      <ul className="pl-8 list-disc">
                         {activeButton.content[activeContentButtonIndex].lists[headingIndex].map((item, itemIndex) => (
-                          <li className="py-1" key={itemIndex}>
+                          <li className="text-xl max-lg:text-base max-md:text-normal" key={itemIndex}>
                             {item}
                           </li>
                         ))}
@@ -76,7 +94,7 @@ const Content = ({ buttons, activeButtonId }) => {
                     </div>
                   ))}
                 </div>
-                <Link href={activeButton.href} className=" text-blue-600">See More... </Link>
+               <div className=" mt-10 border"> <Link href={activeButton.href} className=" text-blue-600 ">See More... </Link></div>
               </div>
             ) : (
               <div>
@@ -103,13 +121,13 @@ const HomeSidebar = () => {
       id: 1,
       label: "Mobile Application",
       content_label:"Mobile Application Development",
-      href : "/",
+      href : "/mobile-application",
       content: [
         {
             headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
             lists: [
               ["Programming Languages: Java and Kotlin for native Android app development.", "Integrated Development Environment (IDE): Android Studio for code editing, debugging, and testing.", "Android SDK and Jetpack Components: Utilization of Android SDK Jetpack libraries for buliding robust ,feature-rih android apps"],
-              ["Requirement Analysis: fklqwhjfh nqfdlkflkq lqdjlkqj lqnjdlkqj ljflqn ldlq ljlwqjflqj ljwfljwl fjwljwljwl fwjljj3oiuoi32 rjrlwjlkwejf", "Agile Development Methodology: cwlkcwkle cnlkewnl clwnlfnlkwjf flnwlknflw lwmlflkwm wclmlfnwl lfrwlfmwlj fnmwlkjrkwl flnwlnflkw lwmflwlw lwfmlfjlemlmlkmrel nlenlke lnelknlke venlknlke ", "Design Prototyping: lnslnvl nclkwenlfnm  ekwnlfknwf lnlkegfnlkegn  lneglkne gleknle glenml gelkgmlkem lg le gel lkmgklrmgeklr glemglkrmlkg gklemglk e glkemngklemlk cnkjncvkewj ","Programming Languages: Java and Kotlin for native Android app development.","Programming Languages: Java and Kotlin for native Android app development."],
+              ["jhvhjjh jhjbv jhvjh hjvjhuyfuj uvuyvj uyuy uyvjhvuyvuyv","Requirement Analysis: fklqwhjfh nqfdlkflkq lqdjlkqj lqnjdlkqj ljflqn ldlq ljlwqjflqj ljwfljwl fjwljwljwl fwjljj3oiuoi32 rjrlwjlkwejf", "Agile Development Methodology: cwlkcwkle cnlkewnl clwnlfnlkwjf flnwlknflw lwmlflkwm wclmlfnwl lfrwlfmwlj fnmwlkjrkwl flnwlnflkw lwmflwlw lwfmlfjlemlmlkmrel nlenlke lnelknlke venlknlke ",],
             ],
           },
           {
@@ -134,7 +152,7 @@ const HomeSidebar = () => {
         id: 2,
         label: "Cross-platforms",
         content_label:"Savin Yadav",
-        href : "/",
+        href : "/cross-platform",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -164,7 +182,7 @@ const HomeSidebar = () => {
       {
         id: 3,
         label: "UI/UX Design",
-        href : "/",
+        href : "/ui-ux-design",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -194,7 +212,7 @@ const HomeSidebar = () => {
       {
         id: 4,
         label: "Web Application",
-        href : "/",
+        href : "/web-application",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -224,7 +242,7 @@ const HomeSidebar = () => {
       {
         id: 5,
         label: "Backend Service",
-        href : "/",
+        href : "/backend-service",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -254,7 +272,7 @@ const HomeSidebar = () => {
       {
         id: 6,
         label: "Custom Software",
-        href : "/",
+        href : "/custom-software",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -284,7 +302,7 @@ const HomeSidebar = () => {
       {
         id: 7,
         label: "Ecommerce & CMS",
-        href : "/",
+        href : "/ecommerce-cms",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -314,7 +332,7 @@ const HomeSidebar = () => {
       {
         id: 8,
         label: "Software Testing",
-        href : "/",
+        href : "/software-testing",
         content: [
             {
                 headings: ["1. Texhnologies and Tools:", "2. Development Process:"],
@@ -341,7 +359,6 @@ const HomeSidebar = () => {
              
           ],
       },
-    // Add more buttons and content as needed
   ]);
 
   const [activeButtonId, setActiveButtonId] = useState(1);
@@ -351,10 +368,14 @@ const HomeSidebar = () => {
   };
 
   return (
-    <div className="home-sidebar flex gap-20">
+    <>
+     <h1 className="text-2xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium">SERVICES</h1>
+     <p className="text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5">We are a creative agency and offers <br/> Services in various technologies</p>
+     <div className="home-sidebar flex gap-20 max-lg:gap-14 lg:pt-10 max-lg:pt-10">
       <Sidebar buttons={buttons} activeButtonId={activeButtonId} setActiveButton={setActiveButton} />
       <Content buttons={buttons} activeButtonId={activeButtonId} />
     </div>
+    </>
   );
 };
 

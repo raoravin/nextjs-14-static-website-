@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+.ubuntu-sans-100 {
+  font-family: 'Ubuntu Sans', sans-serif;
+  font-weight: 100;
+}
+
+.ubuntu-sans-italic-400 {
+  font-family: 'Ubuntu Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-sans-700 {
+  font-family: 'Ubuntu Sans', sans-serif;
+  font-weight: 700;
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +32,7 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Ubuntu Sans", sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333; /* Default text color */

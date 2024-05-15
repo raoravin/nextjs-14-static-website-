@@ -1,10 +1,16 @@
-
-
 .home-content {
     background-image: url('../../public/images/main-bg.jpg');
     background-size: cover; /* Adjusts the size of the background image */
     background-position: center; /* Positions the background image at the center */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
-    height: 100vh;
+     /* Sets the height of the background image to 100vh */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.home-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }

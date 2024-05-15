@@ -13,8 +13,13 @@ import { HiInformationCircle } from "react-icons/hi";
 import "../styles/header.css";
 import { useEffect, useState } from "react";
 import DrawerAccordian from "./DrawerAccordian"
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
 
 export default function Header() {
+  const pathname = usePathname();
+
   // STATE TO TRACK IF SIDEDRAWER IS OPEN OR CLOSED
   const [showSideDrawer, setshowSideDrawer] = useState(false);
 
@@ -55,14 +60,14 @@ export default function Header() {
 
   return (
     <>
-      <nav className="relative h-14 mt-6 overflow-x-hidden">
-        <div className={` max-lg:hidden absolute left-1/2 transform -translate-x-1/2 bg-slate-700 text-white rounded-lg md:min-w-max`}>
+      <nav className=" w-full absolute mt-6 overflow-x-hidden max-lg:px-3">
+        <div className={` max-lg:hidden w-7/12 mx-auto bg-slate-700 text-white rounded-lg md:min-w-max`}>
           <div className="">
             <ul
               className={`h-14 flex items-center justify-between gap-10 font-medium tracking-wide text-xl mx-4`}
             >
               <li className=" py-3 flex mr-20">logo</li>
-              <li className="border-b-4 py-3 flex gap-2">HOME</li>
+              <li className={`py-3 flex gap-2 ${pathname === "/" ? "border-b-4" : ""}` }><Link href="/">HOME</Link></li>
               <li className=" py-3 flex gap-2">ABOUT</li>
               <li className=" py-3 flex gap-2">CAREER</li>
               <li className=" py-3 flex gap-2">SERVICES</li>
@@ -71,7 +76,7 @@ export default function Header() {
             </ul>
           </div>
         </div>
-        <div className={` lg:hidden  absolute left-1/2 right-1/2 transform -translate-x-1/2 bg-slate-700 text-white rounded-lg w-11/12 `}>
+        <div className={` lg:hidden mx-auto bg-slate-700 text-white rounded-lg w-12/12 `}>
           <div className=" flex w-full justify-between px-3 sm:px-5">
             <div className=" h-14 flex items-center">Logo</div>
             <div
