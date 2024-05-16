@@ -35,11 +35,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="home-card w-full flex max-lg:flex-col gap-10 max-sm:gap-36 max-lg:gap-56 px-16 max-sm:px-8 ">
-        <div className="h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-48 rounded-2xl"></div>
-        <div className="h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-48 rounded-2xl"></div>
+      <div className="home-card w-full flex max-md:flex-col gap-10 max-sm:gap-32 max-md:gap-56 px-5 lg:px-16 2xl:px-28 max-sm:px-8 pb-10 ">
+        <div className=" h-40 sm:h-48 md:h-52 lg:h-60 xl:h-80  bg-amber-400 w-6/12 max-md:w-full  rounded-2xl"></div>
+        <div className=" h-40 sm:h-48 md:h-52 lg:h-60 xl:h-80  bg-amber-400 w-6/12 max-md:w-full rounded-2xl"></div>
       </div>
-      <div className="w-full h-auto py-24 text-white px-14 max-lg:px-0 max-sm:px-0">
+      <div className="w-full h-auto pt-24 text-white px-3 max-lg:px-0 max-sm:px-0">
         <div className="mt-16">
           <HomeSidebar />
         </div>
@@ -47,7 +47,7 @@ export default function Home() {
       <div className="w-full h-auto text-white my-20 py-28">
         <HomeCard />
       </div>
-      <div className="">
+      <div className="pb-32">
         <div className="max-sm:px-4 px-10">
           <h1 className=" text-2xl max-sm:text-sm max-md:text-xl max-lg:text-2xl text-white font-medium ">
             TESTIMONIALS

@@ -68,7 +68,7 @@ const Card = ({ card }) => {
 
 const CardsContainer = ({ cards }) => {
   return (
-    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 max-sm:gap-10 max-lg:gap-20 max-xl:gap-5 gap-16">
+    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 max-sm:gap-5 max-lg:gap-20 max-xl:gap-5 gap-16">
       {cards.map((card) => (
         <Card key={card.id} card={card} />
       ))}
@@ -81,8 +81,8 @@ const HomeCard = () => {
 
   return (
     <div className=" max-sm:px-4 px-10 py-8">
-      <h1 className="text-2xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium">Industries</h1>
-      <p className=" text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5 xl:pb-10 max-sm:my-3 max-sm:pb-3 md:pb-5">Our Vision to Caters to Diverse Industry Demands</p>
+      <h1 className="text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">Industries</h1>
+      <p className=" text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5 xl:pb-10 max-sm:my-3 max-sm:pb-8 md:pb-5">Our Vision to Caters to Diverse Industry Demands</p>
       <CardsContainer cards={cards} />
     </div>
   );

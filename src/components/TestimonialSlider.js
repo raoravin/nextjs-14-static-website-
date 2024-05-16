@@ -45,10 +45,10 @@ export default function Slider() {
   ];
 
   return (
-    <div className=" h-screen px-16 ">
+    <div className=" max-[380px]:px-14 max-[480px]:px-16 max-sm:px-24  ">
       <section
         id="slider"
-        className=" mx-auto  max-sm:mt-14 my-20 w-full  sm:w-8/12 xl:w-6/12 sm:h-[300px] md:h-[360px] lg:h-[400px] xl:h-[450px] h-[200px]"
+        className=" mx-auto max-sm:mt-14 my-20 sm:w-8/12 xl:w-6/12 sm:h-[300px] md:h-[360px] lg:h-[400px] xl:h-[450px] h-[200px]"
       >
         {slides.map((slide, index) => (
           <input

@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">SYNCK</h2>
             <p className="mb-4">We provide the expertise and support to propel your business forward.</p>
-            <div className="flex flex-col sm:flex-row sm:space-x-2 mb-4">
+            <div className="flex flex-col sm:flex-row sm:space-x-2 my-4">
               <input
                 type="email"
                 placeholder="Enter Your Email"
@@ -19,11 +19,11 @@ const Footer = () => {
               />
               <button className="bg-blue-600 px-4 py-2 rounded-b-lg sm:rounded-r-lg sm:rounded-b-none">Get Started</button>
             </div>
-            <div className="flex space-x-4">
-              <Image src="/images/test.png" alt="alt" width={75} height={75} />
-              <Image src="/images/test.png" alt="alt" width={75} height={75} />
-              <Image src="/images/test.png" alt="alt" width={75} height={75} />
-              <Image src="/images/test.png" alt="alt" width={75} height={75} />
+            <div className="flex space-x-4 mt-10">
+              <Image src="/images/test.png" alt="alt" width={60} height={60} />
+              <Image src="/images/test.png" alt="alt" width={60} height={60} />
+              <Image src="/images/test.png" alt="alt" width={60} height={60} />
+              <Image src="/images/test.png" alt="alt" width={60} height={60} />
             </div>
           </div>
           <div>
@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             <div>
               <h4 className="font-bold mb-4">Services</h4>
-              <ul>
+              <ul className=' max-sm:text-sm'>
                 <li className="mb-2">IT Support</li>
                 <li className="mb-2">Web Design</li>
                 <li className="mb-2">Development</li>
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="font-bold mb-4">Company</h4>
-              <ul>
+              <ul className=' max-sm:text-sm'>
                 <li className="mb-2">Blog</li>
                 <li className="mb-2">About Us</li>
                 <li className="mb-2">Partners</li>
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="font-bold mb-4">Product</h4>
-              <ul>
+              <ul className=' max-sm:text-sm'>
                 <li className="mb-2">Case Studies</li>
                 <li className="mb-2">Our Pricing</li>
                 <li className="mb-2">Features</li>
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="font-bold mb-4">Our Fields</h4>
-              <ul>
+              <ul className=' max-sm:text-sm'>
                 <li className="mb-2">Healthcare</li>
                 <li className="mb-2">Banks</li>
                 <li className="mb-2">Logistics</li>
@@ -96,7 +96,7 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="font-bold mb-4">Legal</h4>
-              <ul>
+              <ul className=' max-sm:text-sm'>
                 <li className="mb-2">Licenses</li>
                 <li className="mb-2">Settings</li>
                 <li className="mb-2">Cookies</li>
@@ -107,7 +107,7 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
-              <ul>
+              <ul className=' max-sm:text-sm'>
                 <li className="mb-2">Phone: +1-455-1482-236</li>
                 <li className="mb-2">Phone: +1-938-740-7555</li>
                 <li className="mb-2">Mail: bluebase@mail.com</li>
