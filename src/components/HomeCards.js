@@ -58,7 +58,7 @@ const cardsData = [
 
 const Card = ({ card }) => {
   return (
-    <div className="border max-w-44 max-sm:h-28 max-xl:h-36  h-40 border-gray-300 rounded-md p-4">
+    <div className="border max-w-44 max-sm:h-28 max-xl:h-36  h-36 border-gray-300 rounded-md p-4">
       <h3 className="text-lg font-semibold">{card.title}</h3>
       <p className="text-sm text-gray-600">{card.description}</p>
       <p className="text-xs text-gray-400 mt-2">{card.date}</p>
@@ -68,7 +68,7 @@ const Card = ({ card }) => {
 
 const CardsContainer = ({ cards }) => {
   return (
-    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 max-sm:gap-10 max-lg:gap-20 max-xl:gap-5 gap-20">
+    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 max-sm:gap-10 max-lg:gap-20 max-xl:gap-5 gap-16">
       {cards.map((card) => (
         <Card key={card.id} card={card} />
       ))}

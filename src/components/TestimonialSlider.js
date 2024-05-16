@@ -45,14 +45,10 @@ export default function Slider() {
   ];
 
   return (
-    <div className=" h-screen">
-      <h1 className=" text-2xl py-5 text-white">TESTIMONIALS</h1>
-      <p className=" text-3xl text-white font-semibold">
-        Our Vision to Caters to Diverse Industry Demands
-      </p>
+    <div className=" h-screen px-16 ">
       <section
         id="slider"
-        className="max-sm:w-10/12 max-lg:w-8/12 w-8/12 rounded-3xl max-sm:h-1/4 max-lg:h-2/5 h-3/6"
+        className=" mx-auto  max-sm:mt-14 my-20 w-full  sm:w-8/12 xl:w-6/12 sm:h-[300px] md:h-[360px] lg:h-[400px] xl:h-[450px] h-[200px]"
       >
         {slides.map((slide, index) => (
           <input
@@ -70,12 +66,12 @@ export default function Slider() {
             key={slide.id}
             htmlFor={`s${slide.id}`}
             id={`slide${slide.id}`}
-            className="label bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 rounded-lg p-4 py-10 shadow-lg text-white"
+            className="label bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 rounded-lg p-3 sm:p-4 md:p-5 lg:p-6 shadow-lg text-white"
           >
-            <div className=" text-5xl font-bold px-5 pb-20">{slide.icon}</div>
+            <div className=" ">{slide.icon}</div>
             <div className="">
-              <p className="mb-6 text-2xl px-5">{slide.text}</p>
-              <p className="font-bold text-2xl px-5 py-5">{slide.author}</p>
+              <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">{slide.text}</p>
+              <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">{slide.author}</p>
             </div>
           </label>
         ))}

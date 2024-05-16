@@ -13,7 +13,9 @@ export default function Home() {
               <span>●</span>
             </div>
             <div>
-            <p className="tracking-widest text-md sm:text-lg md:text-xl lg:text-3xl ">SQUAD IS AVAILABLE</p>
+              <p className="tracking-widest text-md sm:text-lg md:text-xl lg:text-3xl ">
+                SQUAD IS AVAILABLE
+              </p>
             </div>
           </div>
           <div>
@@ -38,13 +40,23 @@ export default function Home() {
         <div className="h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-48 rounded-2xl"></div>
       </div>
       <div className="w-full h-auto py-24 text-white px-14 max-lg:px-0 max-sm:px-0">
-        <div className="mt-16"><HomeSidebar /></div>
+        <div className="mt-16">
+          <HomeSidebar />
+        </div>
       </div>
       <div className="w-full h-auto text-white my-20 py-28">
         <HomeCard />
       </div>
-      <div className="py-20 px-10">
-        <Slider/>
+      <div className="">
+        <div className="max-sm:px-4 px-10">
+          <h1 className=" text-2xl max-sm:text-sm max-md:text-xl max-lg:text-2xl text-white font-medium ">
+            TESTIMONIALS
+          </h1>
+          <p className="text-5xl  max-sm:text-base max-md:text-xl max-lg:text-2xl text-white font-bold my-3 sm:my-5 md:my-7 lg:my-10">
+            Our Vision to Caters to Diverse Industry Demands
+          </p>
+        </div>
+        <Slider />
       </div>
     </div>
   );
