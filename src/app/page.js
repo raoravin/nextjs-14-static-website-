@@ -37,7 +37,7 @@ export default function Home() {
         <div className="h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-48 rounded-2xl"></div>
         <div className="h-72 bg-amber-400 w-6/12 max-lg:w-full max-sm:h-48 rounded-2xl"></div>
       </div>
-      <div className="w-full h-auto py-24 text-white px-14 max-lg:px-8 max-sm:px-5">
+      <div className="w-full h-auto py-24 text-white px-14 max-lg:px-0 max-sm:px-0">
         <div className="mt-16"><HomeSidebar /></div>
       </div>
       <div className="w-full h-auto text-white my-20 py-28">

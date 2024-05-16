@@ -11,7 +11,7 @@ import { LiaExternalLinkAltSolid } from "react-icons/lia";
 const Sidebar = ({ buttons,activeButtonId,setActiveButton }) => {
   return (
     <>
-    <div className="sidebar text-white flex flex-col gap-5 max-lg:gap-8 max-md:hidden">
+    <div className="sidebar text-white flex flex-col gap-5 max-lg:gap-9 max-md:hidden">
       {buttons.map((button) => (
         <button
           key={button.id}
@@ -24,15 +24,15 @@ const Sidebar = ({ buttons,activeButtonId,setActiveButton }) => {
       ))}
     </div>
     <div className="hidden max-md:block mx-auto">
-    <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 max-[400px]:gap-x-3 gap-x-8 gap-5 ">
         {buttons.map((button) => (
           <Link
             href={button.href}
             key={button.id}
             onClick={() => setActiveButton(button.id)}
-            className={`min-w-36 flex items-center justify-between gap-5 p-5 max-sm:p-3 rounded-md bg-gray-800 font-medium`}
+            className={` min-h-12 h-16 max-[360px]:min-w-32 min-w-40 sm:w-44  flex items-center justify-center  rounded-md bg-gray-800 max-sm:text-sm font-medium`}
           >
-            <span className="">{button.label}</span> <span className=""><LiaExternalLinkAltSolid /></span>
+            <span className=" text-center">{button.label}</span>
           </Link>
         ))}
       </div>
@@ -86,7 +86,7 @@ const Content = ({ buttons, activeButtonId }) => {
                       <h1 className="text-2xl max-lg:text-lg max-md:text-base">{heading}</h1>
                       <ul className="pl-8 list-disc">
                         {activeButton.content[activeContentButtonIndex].lists[headingIndex].map((item, itemIndex) => (
-                          <li className=" xl:text-lg 2xl:text-xl max-lg:text-base max-md:text-normal xl:mt-2" key={itemIndex}>
+                          <li className=" xl:text-lg 2xl:text-xl max-lg:text-base lg:text-base xl:mt-2" key={itemIndex}>
                             {item}
                           </li>
                         ))}
@@ -369,11 +369,13 @@ const HomeSidebar = () => {
 
   return (
     <>
-     <h1 className="text-2xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium">SERVICES</h1>
-     <p className="text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5">We are a creative agency and offers <br/> Services in various technologies</p>
-     <div className="home-sidebar flex gap-20 max-lg:gap-14 lg:pt-10 max-lg:pt-10">
+    <div className="max-sm:px-4 px-10 py-8">
+    <h1 className=" text-2xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium">SERVICES</h1>
+     <p className=" text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5">We are a creative agency and offers <br/> Services in various technologies</p>
+     <div className="home-sidebar flex gap-20 max-lg:gap-16 lg:pt-10 max-lg:pt-10 max-sm:pt-3">
       <Sidebar buttons={buttons} activeButtonId={activeButtonId} setActiveButton={setActiveButton} />
       <Content buttons={buttons} activeButtonId={activeButtonId} />
+    </div>
     </div>
     </>
   );
