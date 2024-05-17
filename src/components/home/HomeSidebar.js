@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import "../styles/header.css";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
 const Sidebar = ({ buttons, activeButtonId, setActiveButton }) => {

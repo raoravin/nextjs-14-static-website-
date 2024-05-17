@@ -1,7 +1,7 @@
-import HomeSidebar from "@/components/HomeSidebar";
+import HomeSidebar from "@/components/home/HomeSidebar";
 import "../styles/home.css";
-import HomeCard from "@/components/HomeCards";
-import Slider from "@/components/TestimonialSlider";
+import HomeCard from "@/components/home/HomeCards";
+import Slider from "@/components/home/TestimonialSlider";
 
 export default function Home() {
   return (

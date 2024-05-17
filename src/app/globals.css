@@ -38,3 +38,13 @@ body {
     color: #333; /* Default text color */
     background-color: #050505f0;
 }
+
+/* Custom CSS to hide the scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}

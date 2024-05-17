@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import { HiInformationCircle } from "react-icons/hi";
-import "../styles/header.css";
 import { useEffect, useState } from "react";
 import DrawerAccordian from "./DrawerAccordian"
 import { usePathname } from "next/navigation";
@@ -95,11 +94,7 @@ export default function Header() {
             : "transform transition-all duration-500 ease-in-out -translate-y-full"
         } `}
       >
-        <div className={`h-20 flex justify-between absolute`}>
-          <div className="">Logo</div>
-          <div className="flex gap-3"><span className=" text-lg ">Close</span> <span  onClick={sideDrawerClosedHandler} className=" h-5 text-xl mt-1 cursor-pointer transition-transform transform-gpu hover:rotate-90"><FaTimes /></span></div>
-        </div>
-        <DrawerAccordian />
+        <DrawerAccordian sideDrawerClosedHandler={sideDrawerClosedHandler} />
       </div>
     </>
   );

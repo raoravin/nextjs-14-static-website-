@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/navbar/Navbar";
 import { Ubuntu } from 'next/font/google';
 
 const ubuntu = Ubuntu({
