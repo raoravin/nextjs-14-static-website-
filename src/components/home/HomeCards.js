@@ -2,66 +2,90 @@
 
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const cardsData = [
   {
     id: 1,
-    title: "E commercew",
+    title: "Education",
+    icon: "image 367"
   },
   {
     id: 2,
-    title: "Card 2",
+    title: "Ecommerce",
+    icon: "image 368"
+
   },
   {
     id: 3,
-    title: "Card 3",
+    title: "Restaurnt",
+    icon: "image 369"
+
   },
   {
     id: 4,
-    title: "Card 3",
+    title: "Travel",
+    icon: "image 370"
+
   },
   {
     id: 5,
-    title: "Card 3",
+    title: "Entertainment",
+    icon: "image 371"
+
   },
   {
     id: 6,
-    title: "Card 3",
+    title: "Social media",
+    icon: "image 372"
+
   },
   {
     id: 7,
-    title: "Card 3",
+    title: "Real State",
+    icon: "image 375"
+
   },
   {
     id: 8,
-    title: "Card 3",
+    title: "Healthcare",
+    icon: "image 376"
+
   },
   {
     id: 9,
-    title: "Card 3",
+    title: "Finance",
+    icon: "image 377"
+
   },
   {
     id: 10,
-    title: "Card 3",
+    title: "Logistics",
+    icon: "image 378"
+
   },
   {
     id: 11,
-    title: "Card 3",
+    title: "SaaS",
+    icon: "image 379"
+
 
   },
   {
     id: 12,
-    title: "Card 3",
+    title: "News & Media",
+    icon: "image 380"
+
   },
-  // Add more card objects as needed
 ];
 
 const Card = ({ card }) => {
   return (
-    <div className="border max-w-44 max-sm:h-28 max-xl:h-36  h-36 border-gray-300 rounded-md p-4">
-      <h3 className="text-lg font-semibold">{card.title}</h3>
-      <p className="text-sm text-gray-600">{card.description}</p>
-      <p className="text-xs text-gray-400 mt-2">{card.date}</p>
+    <div className="border border-neutral-600 bgcolor_3 relative flex items-center flex-col gap-5  max-w-44 max-sm:h-28 max-xl:h-36  h-36 rounded-md">
+      <div className=" w-[65px] mt-4">
+        <Image src={`/images/home-card/${card.icon}.png`} alt="alt" width={100} height={100} />
+      </div>
+      <div className="absolute bottom-5 text-xl font-light"><h1 className="">{card.title}</h1></div>
     </div>
   );
 };

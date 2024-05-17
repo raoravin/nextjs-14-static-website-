@@ -3,20 +3,25 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
+import Image from "next/image";
+
+const sidebarIcon = []
 
 const Sidebar = ({ buttons, activeButtonId, setActiveButton }) => {
   return (
     <>
-      <div className="sidebar text-white flex flex-col gap-5 max-lg:gap-6 max-md:hidden">
+      <div className="sidebar text-white flex flex-col gap-6 max-lg:gap-6 max-md:hidden">
         {buttons.map((button) => (
           <button
             key={button.id}
             onClick={() => setActiveButton(button.id)}
-            className={` lg:min-w-60 p-6 max-lg:w-48 max-lg:px-1 max-lg:py-4 rounded-md bg-gray-800 font-medium text-xl max-lg:text-base  ${
-              button.id === activeButtonId ? "border-2 border-blue-500" : ""
+            className={` w-[270px] max-lg:w-[200px] h-[70px] max-lg:h-[55px] border-2 flex items-center  gap-3 py-2 px-3   rounded-md bg-gray-800 font-medium text-xl max-lg:text-sm  ${
+              button.id === activeButtonId ? " border-blue-600" : "border-neutral-600"
             }`}
           >
-            {button.label}
+            <span className="w-12 max-lg:w-9"><Image src={`/images/sidebar/${button.icon}.png` }alt="alt" width={50} height={50} /></span>
+            <span className="">{button.label}</span>
+
           </button>
         ))}
       </div>
@@ -52,10 +57,10 @@ const Content = ({ buttons, activeButtonId }) => {
     setActiveContentButtonIndex(index);
   };
 
-  const contentButtonNames = ["Android", "iOS APP", "iPad APP"];
+  const contentButtonNames = ["Android", "iOS App", "iPad App"];
 
   return (
-    <div className="content text-white max-md:hidden">
+    <div className="content text-white max-md:hidden ">
       {activeButton?.content && (
         <div>
           {activeButton.content.length > 0 ? (
@@ -63,7 +68,7 @@ const Content = ({ buttons, activeButtonId }) => {
               <div>
                 <h1 className="pb-10 max-lg:pb-6 text-pretty text-4xl max-lg:text-2xl font-semibold">{activeButton.content_label}</h1>
               </div>
-              <div className=" content-buttons h-12 max-lg:h-10 flex items-center justify-center p-1 px-5 gap-8 max-lg:gap-5  w-fit rounded-lg bg-slate-700">
+              <div className=" content-buttons h-14 max-lg:h-12 flex items-center justify-center p-1 px-7  gap-9 max-lg:gap-5  w-fit rounded-lg bg-slate-700">
                 {activeButton.content.map((section, index) => (
                   <button
                     key={index}
@@ -71,13 +76,13 @@ const Content = ({ buttons, activeButtonId }) => {
                       handleContentButtonChange(index);
                       handleContentChange(0);
                     }}
-                    className={`py-2.5 max-lg:py-1 ${index === activeContentButtonIndex ? 'border-b-4 rounded-sm text-white' : 'bg-gray-700 text-white'}`}
+                    className={`py-2.5 max-lg:py-2 font-medium text-lg ${index === activeContentButtonIndex ? 'border-b-4 rounded-sm text-white' : 'bg-gray-700 text-white'}`}
                   >
                      {contentButtonNames[index]}
                   </button>
                 ))}
               </div>
-              <div className="mt-10 max-lg:mt-6  max-lg:text-sm max-lg:h-[440px] h-[520px] overflow-y-hidden">
+              <div className="mt-10 max-lg:mt-6  max-lg:text-sm max-lg:h-[440px] h-[495px] overflow-y-scroll hide-scrollbar">
                 <div dangerouslySetInnerHTML={{ __html: activeButton.content[activeContentButtonIndex].html }} />
               </div>
               <div className="mt-10 max-lg:mt-5 text-lg">
@@ -104,27 +109,28 @@ const HomeSidebar = () => {
       label: "Mobile Application",
       content_label: "Mobile Application Development",
       href: "/mobile-application",
+      icon: "mobile-application",
       content: [
         {
           html: `
         <div class="space-y-5 max-lg:space-y-2">
           <div>
-            <h2 class="text-2xl font-bold mb-3 max-lg:mb-1">1. Technologies and Tools:</h2>
-            <ul class="list-disc pl-8 space-y-1">
-              <li><span class="font-bold text-pretty">Programming Languages:</span> Java and Kotlin for native Android app development.</li>
-              <li><span class="font-bold text-pretty">Integrated Development Environment (IDE):</span> Android Studio for code editing, debugging, and testing.</li>
-              <li><span class="font-bold text-pretty">Android SDK and Jetpack Components:</span> Utilization of Android SDK and Jetpack libraries for building robust, feature-rich Android apps.</li>
+            <h2 class="text-2xl max-lg:text-lg font-bold mb-3 max-lg:mb-1">1. Technologies and Tools:</h2>
+            <ul class="list-disc pl-8 space-y-1 xl:pr-[200px]">
+              <li><span class="font-bold text-pretty break-words">Programming Languages:</span> Java and Kotlin for native Android app development.</li>
+              <li><span class="font-bold  break-words">Integrated Development Environment (IDE):</span> Android Studio for code editing, debugging, and testing.</li>
+              <li><span class="font-bold  break-words">Android SDK and Jetpack Components:</span> Utilization of Android SDK and Jetpack libraries for building robust, feature-rich Android apps.</li>
             </ul>
           </div>
 
           <div>
-            <h2 class="text-2xl font-bold mb-3 max-lg:mb-1">2. Development Process:</h2>
-            <ul class="list-disc pl-8 space-y-1 ">
-              <li><span class="font-bold text-pretty">Requirements Analysis:</span> Thorough understanding of client needs, preferences, and project scope to define clear objectives and deliverables.</li>
-              <li><span class="font-bold text-pretty">Agile Development Methodology:</span> Agile methodologies for iterative development, allowing for flexibility, collaboration, and quick adaptation to evolving requirements.</li>
+            <h2 class="text-2xl max-lg:text-lg font-bold mb-3 max-lg:mb-1">2. Development Process:</h2>
+            <ul class="list-disc pl-8 space-y-1 xl:pr-[200px]">
+              <li><span class="font-bold text-pretty ">Requirements Analysis:</span> Thorough understanding of client needs, preferences, and project scope to define clear objectives and deliverables.</li>
+              <li><span class="font-bold text-wrap ">Agile Development Methodology:</span> Agile methodologies for iterative development, allowing for flexibility, collaboration, and quick adaptation to evolving requirements.</li>
               <li><span class="font-bold text-pretty">Design Prototyping:</span> Creation of wireframes and prototypes to visualize app layouts, features, and user interactions before development begins.</li>
-              <li><span class="font-bold text-pretty">Rigorous Testing:</span> Comprehensive testing procedures, including unit testing, integration testing, and user acceptance testing, to ensure app stability, functionality, and usability.</li>
-              <li><span class="font-bold text-pretty">Deployment and Support:</span> Seamless deployment to the Google Play Store and continued post-launch support to address any issues, updates, or enhancements.</li>
+              <li><span class="font-bold text-pretty ">Rigorous Testing:</span> Comprehensive testing procedures, including unit testing, integration testing, and user acceptance testing, to ensure app stability, functionality, and usability.</li>
+              <li><span class="font-bold text-pretty ">Deployment and Support:</span> Seamless deployment to the Google Play Store and continued post-launch support to address any issues, updates, or enhancements.</li>
             </ul>
           </div>
         </div>
@@ -186,6 +192,8 @@ const HomeSidebar = () => {
       label: "Cross-platforms",
       content_label: "Savin Yadav",
       href: "/cross-platform",
+      icon: "cross-platform",
+
       content: [
         {
           html: `
@@ -239,12 +247,38 @@ const HomeSidebar = () => {
           </div>
         `,
         },
+        {
+          html: `
+          <div class="space-y-5 max-lg:space-y-2">
+            <div>
+              <h2 class="text-2xl max-lg:text-lg font-bold mb-3 max-lg:mb-1">1. Technologies and Tools:</h2>
+              <ul class="list-disc pl-8 space-y-1 xl:pr-[200px]">
+                <li><span class="font-bold text-pretty break-words">Programming Languages:</span> Java and Kotlin for native Android app development.</li>
+                <li><span class="font-bold  break-words">Integrated Development Environment (IDE):</span> Android Studio for code editing, debugging, and testing.</li>
+                <li><span class="font-bold  break-words">Android SDK and Jetpack Components:</span> Utilization of Android SDK and Jetpack libraries for building robust, feature-rich Android apps.</li>
+              </ul>
+            </div>
+  
+            <div>
+              <h2 class="text-2xl max-lg:text-lg font-bold mb-3 max-lg:mb-1">2. Development Process:</h2>
+              <ul class="list-disc pl-8 space-y-1 xl:pr-[200px]">
+                <li><span class="font-bold text-pretty ">Requirements Analysis:</span> Thorough understanding of client needs, preferences, and project scope to define clear objectives and deliverables.</li>
+                <li><span class="font-bold text-wrap ">Agile Development Methodology:</span> Agile methodologies for iterative development, allowing for flexibility, collaboration, and quick adaptation to evolving requirements.</li>
+                <li><span class="font-bold text-pretty">Design Prototyping:</span> Creation of wireframes and prototypes to visualize app layouts, features, and user interactions before development begins.</li>
+                <li><span class="font-bold text-pretty ">Rigorous Testing:</span> Comprehensive testing procedures, including unit testing, integration testing, and user acceptance testing, to ensure app stability, functionality, and usability.</li>
+                <li><span class="font-bold text-pretty ">Deployment and Support:</span> Seamless deployment to the Google Play Store and continued post-launch support to address any issues, updates, or enhancements.</li>
+              </ul>
+            </div>
+          </div>
+        `,
+        }
       ],
     },
     {
       id: 3,
       label: "UI/UX Design",
       href: "/ui-ux-design",
+      icon: "ux-ui",
       content: [
         {
           html: `
@@ -330,6 +364,7 @@ const HomeSidebar = () => {
       id: 4,
       label: "Web Application",
       href: "/web-application",
+      icon: "web-app",
       content: [
         {
           html: `
@@ -415,6 +450,8 @@ const HomeSidebar = () => {
       id: 5,
       label: "Backend Service",
       href: "/backend-service",
+      icon: "backend-service",
+
       content: [
         {
           html: `
@@ -468,12 +505,38 @@ const HomeSidebar = () => {
         </div>
       `,
         },
+        {
+          html: `
+          <div class="space-y-5 max-lg:space-y-2">
+            <div>
+              <h2 class="text-2xl max-lg:text-lg font-bold mb-3 max-lg:mb-1">1. Technologies and Tools:</h2>
+              <ul class="list-disc pl-8 space-y-1 xl:pr-[200px]">
+                <li><span class="font-bold text-pretty break-words">Programming Languages:</span> Java and Kotlin for native Android app development.</li>
+                <li><span class="font-bold  break-words">Integrated Development Environment (IDE):</span> Android Studio for code editing, debugging, and testing.</li>
+                <li><span class="font-bold  break-words">Android SDK and Jetpack Components:</span> Utilization of Android SDK and Jetpack libraries for building robust, feature-rich Android apps.</li>
+              </ul>
+            </div>
+  
+            <div>
+              <h2 class="text-2xl max-lg:text-lg font-bold mb-3 max-lg:mb-1">2. Development Process:</h2>
+              <ul class="list-disc pl-8 space-y-1 xl:pr-[200px]">
+                <li><span class="font-bold text-pretty ">Requirements Analysis:</span> Thorough understanding of client needs, preferences, and project scope to define clear objectives and deliverables.</li>
+                <li><span class="font-bold text-wrap ">Agile Development Methodology:</span> Agile methodologies for iterative development, allowing for flexibility, collaboration, and quick adaptation to evolving requirements.</li>
+                <li><span class="font-bold text-pretty">Design Prototyping:</span> Creation of wireframes and prototypes to visualize app layouts, features, and user interactions before development begins.</li>
+                <li><span class="font-bold text-pretty ">Rigorous Testing:</span> Comprehensive testing procedures, including unit testing, integration testing, and user acceptance testing, to ensure app stability, functionality, and usability.</li>
+                <li><span class="font-bold text-pretty ">Deployment and Support:</span> Seamless deployment to the Google Play Store and continued post-launch support to address any issues, updates, or enhancements.</li>
+              </ul>
+            </div>
+          </div>
+        `,
+        }
       ],
     },
     {
       id: 6,
       label: "Custom Software",
       href: "/custom-software",
+      icon: "custom-software",
       content: [
         {
           html: `
@@ -559,6 +622,7 @@ const HomeSidebar = () => {
       id: 7,
       label: "Ecommerce & CMS",
       href: "/ecommerce-cms",
+      icon: "ecommerce-cms",
       content: [
         {
           html: `
@@ -644,6 +708,7 @@ const HomeSidebar = () => {
       id: 8,
       label: "Software Testing",
       href: "/software-testing",
+      icon: "soft-test",
       content: [
         {
           html: `
@@ -739,7 +804,7 @@ const HomeSidebar = () => {
         <h1 className=" text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">
           SERVICES
         </h1>
-        <p className=" text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5">
+        <p className=" text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-semibold my-5">
           We are a creative agency and offers <br /> Services in various
           technologies
         </p>

@@ -1,5 +1,5 @@
 .home-content {
-    background-image: url('../../public/images/main-bg.jpg');
+    background-image: url('/images/main-bg.jpg');
     background-size: cover; /* Adjusts the size of the background image */
     background-position: center; /* Positions the background image at the center */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
@@ -13,4 +13,23 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+.bgcolor_1 {
+    background-color: #3C55F9;
+  }
+
+.bgcolor_2 {
+    background-color: #99C306;
+}
+
+.bgcolor_3 {
+    background-color: #292824;
+}
+
+.home_card {
+    background-image: url('/images/home/card-bg.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }

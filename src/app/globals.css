@@ -36,7 +36,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #333; /* Default text color */
-    background-color: #050505f0;
+    background-color: #151314;
 }
 
 /* Custom CSS to hide the scrollbar */
@@ -48,3 +48,5 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
