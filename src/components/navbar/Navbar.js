@@ -9,6 +9,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
+import "../../app/globals.css"
 import { HiInformationCircle } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import DrawerAccordian from "./DrawerAccordian"
@@ -16,13 +17,14 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ServiceCard from "./cards/ServiceCard";
 
-
 export default function Header() {
   const pathname = usePathname();
 
   // STATE TO TRACK IF SIDEDRAWER IS OPEN OR CLOSED
   const [showSideDrawer, setshowSideDrawer] = useState(false);
   const [isHoveringServices, setIsHoveringServices] = useState(false);
+  const [isHoveringAbout, setIsHoveringAbout] = useState(false);
+
 
 
   //  FUNCTION TO HANDLE CLOSE ACTION ON SIDEDRAWER/MODAL
@@ -66,14 +68,14 @@ export default function Header() {
         <div className={` max-lg:hidden lg:w-[980px] xl:w-[1000px] 2xl:w-[1200px]  max-w-[1200px] mx-auto bg-slate-700 text-white rounded-lg `}>
           <div className="h-14">
             <ul
-              className={`h-14 flex items-center justify-between gap-10 font-medium tracking-wide text-xl mx-4`}
+              className={`h-14 flex items-center justify-between gap-10 font-medium tracking-wide text-lg mx-4`}
             >
               <li className=" py-3 flex mr-20">logo</li>
               <li className={`py-3 flex gap-2 ${pathname === "/" ? "border-b-4" : ""}` }><Link href="/">HOME</Link></li>
               <li className=" py-3 flex gap-2">ABOUT</li>
               <li className=" py-3 flex gap-2">CAREER</li>
               <li 
-              className="py-3 flex gap-2 relative"
+              className="py-3 flex gap-2"
               onMouseEnter={() => setIsHoveringServices(true)}
               onMouseLeave={() => setIsHoveringServices(false)}
               >SERVICES</li>
@@ -82,6 +84,7 @@ export default function Header() {
             </ul>
           </div>
           {
+            <>
             <div
               className={`bg-slate-700 rounded-b-lg transition-all duration-500 ease ${
                 isHoveringServices ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
@@ -91,6 +94,17 @@ export default function Header() {
             >
               <ServiceCard />
             </div>
+            <div
+              className={`bg-slate-700 rounded-b-lg transition-all duration-500 ease ${
+                isHoveringAbout ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+              } overflow-hidden`}
+              onMouseEnter={() => setIsHoveringAbout(true)}
+              onMouseLeave={() => setIsHoveringAbout(false)}
+            >
+              <ServiceCard />
+            </div>
+            
+            </>
           }
         </div>
         <div className={` lg:hidden mx-auto bg-slate-700 text-white rounded-lg w-12/12 `}>

@@ -21,12 +21,12 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <h1 className="text-2xl lg:text-7xl md:text-5xl sm:text-3xl font-extrabold">
+            <h1 className="text-2xl lg:text-7xl md:text-5xl sm:text-3xl font-bold">
               Innovative Solution with
             </h1>
           </div>
           <div>
-            <h1 className="text-2xl lg:text-7xl md:text-5xl sm:text-3xl font-extrabold">
+            <h1 className="text-2xl lg:text-7xl md:text-5xl sm:text-3xl font-bold">
               the Creative Strategic Squad
             </h1>
           </div>
@@ -91,12 +91,12 @@ export default function Home() {
       {/* Industry card section end here */}
 
       {/* testimonial section start here */}
-      <div className="pb-32">
+      <div className="pb-32 max-sm:pb-0">
         <div className="max-sm:px-4 px-10">
           <h1 className=" text-2xl max-sm:text-sm max-md:text-xl max-lg:text-2xl text-white font-medium ">
             TESTIMONIALS
           </h1>
-          <p className="text-5xl  max-sm:text-base max-md:text-xl max-lg:text-2xl text-white font-bold my-3 sm:my-5 md:my-7 lg:my-10">
+          <p className="text-pretty text-5xl font-semibold max-sm:text-lg max-md:text-xl max-lg:text-2xl text-white my-3 sm:my-5 md:my-7 lg:my-4 lg:mb-5">
             Our Vision to Caters to Diverse Industry Demands
           </p>
         </div>

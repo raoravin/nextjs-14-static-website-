@@ -2,11 +2,18 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/navbar/Navbar";
 import { Ubuntu } from 'next/font/google';
+import { Titillium_Web } from "next/font/google";
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
   weight: ['300', '400', '500',  '700',],
   style: ['normal', 'italic']
+});
+
+const titilliumWeb = Titillium_Web({
+  weight: ['200', '300', '400', '600', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 
@@ -20,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${ubuntu.className} flex flex-col min-h-screen`}>
+      <body className={`${titilliumWeb.className} flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

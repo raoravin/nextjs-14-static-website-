@@ -106,7 +106,7 @@ const HomeCard = () => {
   return (
     <div className=" max-sm:px-4 px-10 py-8">
       <h1 className="text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">Industries</h1>
-      <p className=" text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-bold my-5 xl:pb-10 max-sm:my-3 max-sm:pb-8 md:pb-5">Our Vision to Caters to Diverse Industry Demands</p>
+      <p className="text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-semibold my-5 max-sm:my-2 max-sm:mb-6 mb-14">Our Vision to Caters to Diverse Industry Demands</p>
       <CardsContainer cards={cards} />
     </div>
   );

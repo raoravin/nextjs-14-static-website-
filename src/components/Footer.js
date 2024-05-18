@@ -12,7 +12,7 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className=" text-white py-16 mt-auto">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-sm:px-4 px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-14 xl:8">
           <div>
             <h2 className="text-2xl font-bold mb-4">SYNCK</h2>

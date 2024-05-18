@@ -86,11 +86,11 @@ export default function Slider() {
             key={slide.id}
             htmlFor={`s${slide.id}`}
             id={`slide${slide.id}`}
-            className="label bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 rounded-lg p-2 sm:p-4 md:p-5 lg:p-6 shadow-lg text-white max-sm:px-7 md:px-14 xl:px-20"
+            className="label bg-gradient-to-r from-yellow-500 via-red-500 to-pink-500 rounded-lg p-2 sm:p-4 md:p-5 lg:p-6 shadow-lg text-white max-sm:px-3 md:px-14 xl:px-20"
           >
             <div className=" xl:py-5 text-xl md:text-2xl lg:text-3xl xl:text-4xl">{slide.icon}</div>
             <div className="">
-              <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-2 max-sm:pt-2 sm:py-8 xl:py-10">{slide.text}</p>
+              <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-2 max-sm:pt-4 sm:py-8 xl:py-10">{slide.text}</p>
               <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold max-sm:pt-2 max-lg:pt-0 pt-5">{slide.author}</p>
             </div>
           </label>
