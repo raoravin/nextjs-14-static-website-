@@ -2,12 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { FaSquareTwitter } from "react-icons/fa6";
+import { FiInstagram } from "react-icons/fi";
+import { SiYoutubeshorts } from "react-icons/si";
+import { FaFacebook } from "react-icons/fa";
+
+
 
 const Footer = () => {
   return (
     <footer className=" text-white py-16 mt-auto">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-14 xl:8">
           <div>
             <h2 className="text-2xl font-bold mb-4">SYNCK</h2>
             <p className="mb-4">We provide the expertise and support to propel your business forward.</p>
@@ -115,13 +121,17 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 space-y-4 sm:space-y-0">
+          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 max-sm:pr-0 max-lg:pr-8 space-y-4 max-sm:space-y-10 sm:space-y-0">
             <p>© 2023 All rights reserved by WordpressRiver</p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-8 text-2xl">
+              {/* <Image src="/images/test.png" alt="alt" width={40} height={40} />
               <Image src="/images/test.png" alt="alt" width={40} height={40} />
               <Image src="/images/test.png" alt="alt" width={40} height={40} />
-              <Image src="/images/test.png" alt="alt" width={40} height={40} />
-              <Image src="/images/test.png" alt="alt" width={40} height={40} />
+              <Image src="/images/test.png" alt="alt" width={40} height={40} /> */}
+              <span className=""><FaSquareTwitter /></span>
+              <span className=""><FiInstagram /></span>
+              <span className=""><SiYoutubeshorts/></span>
+              <span className=""><FaFacebook /></span>
             </div>
           </div>
         </div>

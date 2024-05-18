@@ -73,7 +73,7 @@ export default function Home() {
       {/* Home card section start here */}
 
       {/* About section start here */}
-      <div className="w-full h-screen bg-slate-700"></div>
+      <div className="w-full h-screen "></div>
       {/* About section start here */}
 
       {/* Home sidebar section start here */}
