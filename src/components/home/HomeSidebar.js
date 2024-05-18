@@ -15,8 +15,8 @@ const Sidebar = ({ buttons, activeButtonId, setActiveButton }) => {
           <button
             key={button.id}
             onClick={() => setActiveButton(button.id)}
-            className={` w-[270px] max-lg:w-[200px] h-[70px] max-lg:h-[55px] border-2 flex items-center  gap-3 py-2 px-3   rounded-md bg-gray-800 font-medium text-xl max-lg:text-sm  ${
-              button.id === activeButtonId ? " border-blue-600" : "border-neutral-600"
+            className={` w-[270px] max-lg:w-[200px] h-[70px] max-lg:h-[55px] border-2 flex items-center  gap-3 py-2 px-3   rounded-md bgcolor_3 font-medium text-xl max-lg:text-sm  ${
+              button.id === activeButtonId ? " border-blue-600" : "border-neutral-700"
             }`}
           >
             <span className="w-12 max-lg:w-9"><Image src={`/images/sidebar/${button.icon}.png` }alt="alt" width={50} height={50} /></span>
@@ -26,14 +26,15 @@ const Sidebar = ({ buttons, activeButtonId, setActiveButton }) => {
         ))}
       </div>
       <div className="hidden max-md:block mx-auto">
-        <div className="grid grid-cols-2 max-[400px]:gap-x-3 gap-x-8 gap-5 ">
+        <div className="grid grid-cols-2 max-[370px]:gap-x-3 max-[440px]:gap-x-6 gap-x-8 gap-5 ">
           {buttons.map((button) => (
             <Link
               href={button.href}
               key={button.id}
               onClick={() => setActiveButton(button.id)}
-              className={` min-h-12 h-16 max-[360px]:min-w-32 min-w-40 sm:w-44  flex items-center justify-center  rounded-md bg-gray-800 max-sm:text-sm font-medium`}
+              className={` bgcolor_3 border-2 border-neutral-700 flex items-center gap-2 px-2 min-h-12 h-16 max-[360px]:min-w-32 min-w-40 sm:w-44  rounded-md sm:text-sm  max-sm:text-xs font-medium`}
             >
+              <span className="w-7"><Image src={`/images/sidebar/${button.icon}.png` }alt="alt" width={50} height={50} /></span>
               <span className=" text-center">{button.label}</span>
             </Link>
           ))}
@@ -68,7 +69,7 @@ const Content = ({ buttons, activeButtonId }) => {
               <div>
                 <h1 className="pb-10 max-lg:pb-6 text-pretty text-4xl max-lg:text-2xl font-semibold">{activeButton.content_label}</h1>
               </div>
-              <div className=" content-buttons h-14 max-lg:h-12 flex items-center justify-center p-1 px-7  gap-9 max-lg:gap-5  w-fit rounded-lg bg-slate-700">
+              <div className="bgcolor_3 content-buttons h-14 max-lg:h-12 flex items-center justify-center p-1 px-7  gap-9 max-lg:gap-5  w-fit rounded-lg">
                 {activeButton.content.map((section, index) => (
                   <button
                     key={index}
@@ -76,7 +77,7 @@ const Content = ({ buttons, activeButtonId }) => {
                       handleContentButtonChange(index);
                       handleContentChange(0);
                     }}
-                    className={`py-2.5 max-lg:py-2 font-medium text-lg ${index === activeContentButtonIndex ? 'border-b-4 rounded-sm text-white' : 'bg-gray-700 text-white'}`}
+                    className={`py-2.5 max-lg:py-2 font-medium text-lg ${index === activeContentButtonIndex ? 'border-b-4 rounded-sm text-white' : ''}`}
                   >
                      {contentButtonNames[index]}
                   </button>

@@ -82,10 +82,10 @@ const cardsData = [
 const Card = ({ card }) => {
   return (
     <div className="border border-neutral-600 bgcolor_3 relative flex items-center flex-col gap-5  max-w-44 max-sm:h-28 max-xl:h-36  h-36 rounded-md">
-      <div className=" w-[65px] mt-4">
+      <div className=" w-[65px] max-sm:w-[50px] max-sm:mt-3 mt-4">
         <Image src={`/images/home-card/${card.icon}.png`} alt="alt" width={100} height={100} />
       </div>
-      <div className="absolute bottom-5 text-xl font-light"><h1 className="">{card.title}</h1></div>
+      <div className="absolute max-sm:bottom-3 bottom-5 max-sm:text-base text-xl font-light"><h1 className="">{card.title}</h1></div>
     </div>
   );
 };
