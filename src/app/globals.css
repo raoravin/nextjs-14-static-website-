@@ -31,6 +31,10 @@
     box-sizing: border-box;
 }
 
+.container {
+  max-width: 1600px;
+}
+
 
 body {
     /* font-family: "Ubuntu Sans", sans-serif; */

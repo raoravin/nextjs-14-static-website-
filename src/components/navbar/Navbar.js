@@ -58,8 +58,8 @@ export default function Header() {
 
   return (
     <>
-      <nav className="w-full absolute mt-6 max-md:px-2 px-5">
-        <div className="max-lg:hidden lg:w-[980px] xl:w-[1000px] 2xl:w-[1200px] max-w-[1200px] mx-auto bg-slate-700 text-white rounded-lg">
+      <nav className="w-full  absolute mt-6 max-md:px-2 px-5">
+        <div className="max-lg:hidden lg:w-[980px] xl:w-[1000px] 2xl:w-[1150px] max-w-[1150px] mx-auto bg-slate-700 text-white rounded-lg">
           <div className="h-14">
             <ul
               className="h-14 flex items-center justify-between gap-5 font-medium tracking-wide text-lg mx-4"

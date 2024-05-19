@@ -104,7 +104,7 @@ const HomeCard = () => {
   const [cards] = useState(cardsData);
 
   return (
-    <div className=" max-sm:px-4 px-8 py-8">
+    <div className=" max-sm:px-4 px-10 py-8">
       <h1 className=" color_2 text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">Industries</h1>
       <p className="text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium lg:font-semibold my-5 max-sm:my-2 max-sm:mb-6 mb-14">Our Vision to Caters to Diverse Industry Demands</p>
       <CardsContainer cards={cards} />

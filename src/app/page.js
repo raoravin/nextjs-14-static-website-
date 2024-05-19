@@ -9,7 +9,7 @@ export default function Home() {
     <div className="home-body">
       {/* home start section start here */}
       <div className="home-content">
-        <div className=" pt-56 pb-40 max-lg:pb-36 max-sm:pb-32 max-sm:pt-36 max-md:py-36 text-white flex flex-col items-center max-sm:gap-7 gap-10">
+        <div className="container mx-auto pt-56 pb-40 max-lg:pb-36 max-sm:pb-32 max-sm:pt-36 max-md:py-36 text-white flex flex-col items-center max-sm:gap-7 gap-10">
           <div className="h-12 pl-5 pr-10 border-2 border-yellow-400 text-yellow-400 rounded-full flex items-center justify-center gap-6">
             <div className="rounded-full flex items-center justify-center text-xl mb-1 font-bold mr-1">
               <span>●</span>
@@ -40,7 +40,7 @@ export default function Home() {
       {/* Home start section end here */}
 
       {/* Home card section start here */}
-      <div className=" w-full flex max-md:flex-col gap-10 max-sm:gap-32 max-md:gap-56 px-5 lg:px-16 2xl:px-28 max-sm:px-8 pb-10 ">
+      <div className=" container mx-auto w-full flex max-md:flex-col gap-10 max-sm:gap-32 max-md:gap-56 px-5 lg:px-16 2xl:px-28 max-sm:px-8 pb-10 ">
         <div className=" home_card bgcolor_1 h-40 relative flex flex-col items-center justify-center sm:h-60 md:h-52 lg:h-60 xl:h-80 w-6/12 max-md:w-full  rounded-2xl">
           <div className=" max-sm:w-[200px] sm:w-[300px] md:w-[250px] lg:w-[300px] xl:w-[350px] absolute max-sm:top-[-70px] sm:top-[-105px] md:top-[-86px] lg:top-[-105px] xl:top-[-120px]">
             <Image
@@ -77,15 +77,13 @@ export default function Home() {
       {/* About section start here */}
 
       {/* Home sidebar section start here */}
-      <div className="w-full h-auto pt-24 text-white px-3 max-lg:px-0 max-sm:px-0">
-        <div className="mt-16">
+      <div className="w-full h-auto pt-24 text-white mx-auto container">
           <HomeSidebar />
-        </div>
       </div>
       {/* Home sidebar section end here */}
 
       {/* Industry card section start here */}
-      <div className="w-full h-auto text-white mx-auto my-20 py-28">
+      <div className="w-full container h-auto text-white mx-auto my-20 py-28">
         <HomeCard />
       </div>
       {/* Industry card section end here */}

@@ -802,8 +802,8 @@ const HomeSidebar = () => {
   return (
     <>
       <div className="max-sm:px-4 px-10 py-8">
-        <h1 className=" text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">
-          SERVICES
+        <h1 className=" color_2 text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">
+          Services
         </h1>
         <p className=" text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-semibold my-5">
           We are a creative agency and offers <br /> Services in various
