@@ -15,6 +15,9 @@ export default function Header() {
   const [showSideDrawer, setshowSideDrawer] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null); // State to track the hovered item
   const [isCardVisible, setIsCardVisible] = useState(false); // State to control card visibility
+  
+
+  console.log("card visible", isCardVisible);
 
   // FUNCTION TO HANDLE CLOSE ACTION ON SIDEDRAWER/MODAL
   const sideDrawerClosedHandler = () => {
@@ -59,59 +62,96 @@ export default function Header() {
         <div className="max-lg:hidden lg:w-[980px] xl:w-[1000px] 2xl:w-[1200px] max-w-[1200px] mx-auto bg-slate-700 text-white rounded-lg">
           <div className="h-14">
             <ul
-              className="h-14 flex items-center justify-between gap-10 font-medium tracking-wide text-lg mx-4"
+              className="h-14 flex items-center justify-between gap-5 font-medium tracking-wide text-lg mx-4"
               onMouseLeave={() => setIsCardVisible(false)} // Hide card when mouse leaves the navbar
             >
-              <li className="py-3 flex mr-20">logo</li>
-              <li className={`py-3 flex gap-2 ${pathname === "/" ? "border-b-4" : ""}`}>
-                <Link href="/">HOME</Link>
-              </li>
+              <li className="py-3 flex mr-32">logo</li>
               <li
-                className="py-3 flex gap-2"
-                onMouseEnter={() => { setHoveredItem("about"); setIsCardVisible(true); }}
+                className={`py-1.5 rounded px-3  ${(hoveredItem === "something" ) ? "bg-slate-500" : ""} ${
+                  pathname === "/" ? "" : ""
+                }`}
+                onMouseEnter={() => {
+                  setHoveredItem("something");
+                  setIsCardVisible(false);
+                }}
+                onMouseLeave={() => setHoveredItem("")}
               >
-                ABOUT
+                <Link href="/">Something</Link>
               </li>
-              <li
-                className="py-3 flex gap-2"
-                onMouseEnter={() => { setHoveredItem("career"); setIsCardVisible(true); }}
-              >
-                CAREER
-              </li>
-              <li
-                className="py-3 flex gap-2"
-                onMouseEnter={() => { setHoveredItem("services"); setIsCardVisible(true); }}
-              >
-                SERVICES
-              </li>
-              <li
-                className="py-3 flex gap-2"
-                onMouseEnter={() => { setHoveredItem("portfolio"); setIsCardVisible(true); }}
-              >
-                PORTFOLIO
-              </li>
-              <li
-                className="py-3 flex gap-2"
-                onMouseEnter={() => { setHoveredItem("contact"); setIsCardVisible(true); }}
-              >
-                CONTACT-US
-              </li>
+              <Link href="/about">
+                <li
+                  className={`py-1.5 rounded px-3  ${(isCardVisible === true && hoveredItem === "about" ) ? "bg-slate-500" : ""}`}
+                  onMouseEnter={() => {
+                    setHoveredItem("about");
+                    setIsCardVisible(true);
+                  }}
+                >
+                  ABOUT
+                </li>
+              </Link>
+                <li
+                  className={`py-1.5 rounded px-3 ${(isCardVisible === true && hoveredItem === "career" ) ? "bg-slate-500" : ""}`}
+                  onMouseEnter={() => {
+                    setHoveredItem("career");
+                    setIsCardVisible(true);
+                  }}
+                >
+                  CAREER
+                </li>
+                <li
+                  className={`py-1.5 rounded px-3 ${(isCardVisible === true && hoveredItem === "services" ) ? "bg-slate-500" : ""}`}
+                  onMouseEnter={() => {
+                    setHoveredItem("services");
+                    setIsCardVisible(true);
+                  }}
+                >
+                  SERVICES
+                </li>
+              <Link href="/portfolio">
+                <li
+                  className={`py-1.5 rounded px-3 ${(hoveredItem === "portfolio" ) ? "bg-slate-500" : ""}`}
+                  onMouseEnter={() => {
+                    setHoveredItem("portfolio");
+                    setIsCardVisible(false);
+                  }}
+                  onMouseLeave={() => setHoveredItem("")}
+                >
+                  PORTFOLIO
+                </li>
+              </Link>
+              <Link href="/contact-us">
+                <li
+                  className={`py-1.5 rounded px-3 ${(hoveredItem === "contact" ) ? "bg-slate-500" : ""}`}
+                  onMouseEnter={() => {
+                    setHoveredItem("contact");
+                    setIsCardVisible(false);
+                  }}
+                  onMouseLeave={() => setHoveredItem("")}
+                >
+                  CONTACT-US
+                </li>
+              </Link>
             </ul>
           </div>
           {isCardVisible && (
             <div
-              className={`bg-slate-700 rounded-b-lg transition-all duration-1000 ease-in-out max-h-screen opacity-100 overflow-hidden`}
+              className={`bg-slate-700 rounded-b-lg transition-all duration-1000 ease-in-out max-h-screen  opacity-100 overflow-hidden`}
               onMouseEnter={() => setIsCardVisible(true)} // Keep card visible when mouse enters the card
               onMouseLeave={() => setIsCardVisible(false)} // Hide card when mouse leaves the card
             >
-              <InfoCard categories={getNavItemContent(hoveredItem).categories} />
+              <InfoCard
+                categories={getNavItemContent(hoveredItem).categories}
+              />
             </div>
           )}
         </div>
         <div className="lg:hidden mx-auto bg-slate-700 text-white rounded-lg w-12/12">
           <div className="flex w-full justify-between px-3 sm:px-5">
             <div className="h-14 flex items-center">Logo</div>
-            <div onClick={showSidebar} className="h-14 flex items-center text-2xl">
+            <div
+              onClick={showSidebar}
+              className="h-14 flex items-center text-2xl"
+            >
               <FaBars />
             </div>
           </div>
