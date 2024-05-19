@@ -158,7 +158,7 @@ export default function Header() {
         </div>
       </nav>
       <div
-        className={`h-screen w-screen text-white z-30 absolute top-0 ${
+        className={`h-screen w-full text-white z-30 absolute top-0 ${
           showSideDrawer
             ? "transform transition-all duration-500 ease-in-out translate-y-0"
             : "transform transition-all duration-500 ease-in-out -translate-y-full"
