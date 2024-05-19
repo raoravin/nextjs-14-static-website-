@@ -121,7 +121,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 max-sm:pr-0 max-lg:pr-8 space-y-4 max-sm:space-y-10 sm:space-y-0">
+          <div className=" 2xl:mr-20 flex flex-col sm:flex-row justify-between items-center mt-8 max-sm:pr-0 max-lg:pr-8 space-y-4 max-sm:space-y-10 sm:space-y-0">
             <p>© 2023 All rights reserved by WordpressRiver</p>
             <div className="flex space-x-8 text-2xl">
               {/* <Image src="/images/test.png" alt="alt" width={40} height={40} />

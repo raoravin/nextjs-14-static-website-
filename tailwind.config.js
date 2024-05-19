@@ -31,6 +31,7 @@ module.exports = {
         'ubuntu': ['Ubuntu', 'sans-serif'],
       },
     },
+    
   },
   plugins: [],
 };

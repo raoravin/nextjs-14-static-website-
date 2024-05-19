@@ -27,6 +27,10 @@
     background-color: #292824;
 }
 
+.color_2{
+    color: #99C306;
+}
+
 .home_card {
     background-image: url('/images/home/card-bg.png');
     background-size: cover; 

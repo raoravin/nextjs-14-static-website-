@@ -85,13 +85,13 @@ export default function Home() {
       {/* Home sidebar section end here */}
 
       {/* Industry card section start here */}
-      <div className="w-full h-auto text-white my-20 py-28">
+      <div className="w-full h-auto text-white mx-auto my-20 py-28">
         <HomeCard />
       </div>
       {/* Industry card section end here */}
 
       {/* testimonial section start here */}
-      <div className="pb-32 max-sm:pb-0">
+      <div className="pb-32 max-sm:pb-0 ">
         <div className="max-sm:px-4 px-10">
           <h1 className=" text-2xl max-sm:text-sm max-md:text-xl max-lg:text-2xl text-white font-medium ">
             TESTIMONIALS

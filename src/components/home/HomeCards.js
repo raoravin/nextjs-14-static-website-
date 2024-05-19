@@ -81,7 +81,7 @@ const cardsData = [
 
 const Card = ({ card }) => {
   return (
-    <div className="border border-neutral-600 bgcolor_3 relative flex items-center flex-col gap-5  max-w-44 max-sm:h-28 max-xl:h-36  h-36 rounded-md">
+    <div className="border border-neutral-600 bgcolor_3 relative flex items-center flex-col gap-5 max-sm:h-32   h-36 rounded-md">
       <div className=" w-[65px] max-sm:w-[50px] max-sm:mt-3 mt-4">
         <Image src={`/images/home-card/${card.icon}.png`} alt="alt" width={100} height={100} />
       </div>
@@ -92,7 +92,7 @@ const Card = ({ card }) => {
 
 const CardsContainer = ({ cards }) => {
   return (
-    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 max-sm:gap-5 max-lg:gap-20 max-xl:gap-5 gap-16">
+    <div className=" grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 md:grid-cols-4  gap-8">
       {cards.map((card) => (
         <Card key={card.id} card={card} />
       ))}
@@ -104,9 +104,9 @@ const HomeCard = () => {
   const [cards] = useState(cardsData);
 
   return (
-    <div className=" max-sm:px-4 px-10 py-8">
-      <h1 className="text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">Industries</h1>
-      <p className="text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-semibold my-5 max-sm:my-2 max-sm:mb-6 mb-14">Our Vision to Caters to Diverse Industry Demands</p>
+    <div className=" max-sm:px-4 px-8 py-8">
+      <h1 className=" color_2 text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">Industries</h1>
+      <p className="text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium lg:font-semibold my-5 max-sm:my-2 max-sm:mb-6 mb-14">Our Vision to Caters to Diverse Industry Demands</p>
       <CardsContainer cards={cards} />
     </div>
   );
