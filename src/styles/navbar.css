@@ -10,7 +10,7 @@
    
   /* Handle */
   .scroll-nav-card::-webkit-scrollbar-thumb {
-    background: rgb(125, 241, 17); 
+    background: rgb(199, 250, 150); 
     border-radius: 10px;
   }
   

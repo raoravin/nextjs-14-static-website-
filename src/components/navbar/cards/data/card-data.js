@@ -8,7 +8,7 @@ export const navItems = [
           <div class=" h-fit w-[25%]">
             <div class="h-fit">
               <h2 class="mb-1 text-lg font-semibold">Mobile App</h2>
-              <ul class=" text-sm xl:text-base border-l-2 border-x-blue-300 ml-1 pl-3 pb-2">
+              <ul class=" text-sm xl:text-base border-l-2 border-blue-600 flex flex-col gap-1 ml-1 pl-3 pb-2">
                 <li class="hover:underline cursor-pointer">Android App Development</li>
                 <li class="hover:underline cursor-pointer">iPhone App Development</li>
                 <li class="hover:underline cursor-pointer">iPad App Development</li>
@@ -17,7 +17,7 @@ export const navItems = [
             </div>
             <div class="h-fit">
               <h2 class=" mb-1 text-lg font-semibold">UI/UX Design</h2>
-              <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+              <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                 <li class="hover:underline cursor-pointer">UI & UX Designing</li>
                 <li class="hover:underline cursor-pointer">Android UX-UI Development</li>
                 <li class="hover:underline cursor-pointer">iPhone UX-UI Development</li>
@@ -26,7 +26,7 @@ export const navItems = [
             </div>
             <div class="h-fit">
               <h2 class=" mb-1 text-lg font-semibold">Cross-platform</h2>
-              <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+              <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                 <li class="hover:underline cursor-pointer">Cross Platform Development</li>
                 <li class="hover:underline cursor-pointer">React Native Development</li>
                 <li class="hover:underline cursor-pointer">Hybrid App Development</li>
@@ -39,7 +39,7 @@ export const navItems = [
             </div>
             <div class="h-fit ">
               <h2 class=" mb-1 text-lg font-semibold">Testing Company</h2>
-              <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+              <ul class=" flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                 <li class="hover:underline cursor-pointer">Penetration Testing</li>
                 <li class="hover:underline cursor-pointer">VAP Testing Services</li>
               </ul>
@@ -49,7 +49,7 @@ export const navItems = [
           <div class="h-fit w-[25%]">
             <div class=" h-fit">
                 <h2 class="mb-1 text-lg font-semibold">Web Application</h2>
-                <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+                <ul class=" flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                     <li class="hover:underline cursor-pointer">Frontend Designing</li>
                     <li class="hover:underline cursor-pointer">Web App Development</li>
                     <li class="hover:underline cursor-pointer">JAVA Application Development</li>
@@ -62,7 +62,7 @@ export const navItems = [
             </div>
             <div class=" h-fit">
                 <h2 class="mb-1 text-lg font-semibold">BackEnd</h2>
-                <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+                <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                     <li class="hover:underline cursor-pointer">PHP Application Development</li>
                     <li class="hover:underline cursor-pointer">Node JS Development</li>
                     <li class="hover:underline cursor-pointer">Python Development</li>
@@ -73,7 +73,7 @@ export const navItems = [
             </div>
             <div class=" h-fit">
               <h2 class="mb-1 text-lg font-semibold">Framework Development</h2>
-              <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+              <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                   <li class="hover:underline cursor-pointer">Framework Development</li>
                   <li class="hover:underline cursor-pointer">Laravel Development</li>
                   <li class="hover:underline cursor-pointer">Zend Development</li>
@@ -87,7 +87,7 @@ export const navItems = [
           <div class="h-fit w-[25%] ">
             <div class="h-fit">
               <h2 class="mb-1 text-lg font-semibold">AWS Services</h2>
-              <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+              <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                   <li class="hover:underline cursor-pointer">AWS MediaLive</li>
                   <li class="hover:underline cursor-pointer">AWS CloudFront</li>
                   <li class="hover:underline cursor-pointer">AWS Media Convert</li>
@@ -108,7 +108,7 @@ export const navItems = [
             </div>
             <div class="h-fit">
                 <h2 class="mb-1 text-lg font-semibold">Ecommerce & CMS</h2>
-                <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+                <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                     <li class="hover:underline cursor-pointer">Ecommerce & CMS</li>
                     <li class="hover:underline cursor-pointer">Magento Development</li>
                     <li class="hover:underline cursor-pointer">Shopify Development</li>
@@ -121,9 +121,9 @@ export const navItems = [
             </div>
           </div>
           <div class="h-fit w-[25%]">
-            <div class=" h-fit">
+            <div class="flex flex-col gap-1 h-fit">
               <h2 class="mb-1 text-lg font-semibold">Emerging Technologies</h2>
-              <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+              <ul class=" text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                   <li class="hover:underline cursor-pointer">AI Chatbot Development</li>
                   <li class="hover:underline cursor-pointer">AR/VR Development</li>
                   <li class="hover:underline cursor-pointer">Blockchain Development</li>
@@ -137,7 +137,7 @@ export const navItems = [
             </div>
             <div class="h-fit">
                 <h2 class="mb-1 text-lg font-semibold">Digital Marketing Services</h2>
-                <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+                <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                     <li class="hover:underline cursor-pointer">Search Engine Optimization (SEO)</li>
                     <li class="hover:underline cursor-pointer">PPC Management Services</li>
                     <li class="hover:underline cursor-pointer">Social Media Marketing</li>
@@ -147,7 +147,7 @@ export const navItems = [
             </div>
              <div class="h-fit">
                 <h2 class="mb-1 text-lg font-semibold">Microsoft Technology</h2>
-                <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+                <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                     <li class="hover:underline cursor-pointer">Microsoft Technologies</li>
                     <li class="hover:underline cursor-pointer">.Net Development</li>
                     <li class="hover:underline cursor-pointer">C# Development</li>
@@ -156,7 +156,7 @@ export const navItems = [
             </div>
             <div class="h-fit">
                 <h2 class="mb-1 text-lg font-semibold">Game Development</h2>
-                <ul class=" text-sm xl:text-base border-l-2 ml-1 pl-3 pb-2">
+                <ul class="flex flex-col gap-1 text-sm xl:text-base border-l-2 border-blue-600 ml-1 pl-3 pb-2">
                     <li class="hover:underline cursor-pointer">Android Game Development</li>
                     <li class="hover:underline cursor-pointer">iPhone Game Development</li>
                     <li class="hover:underline cursor-pointer">iPad Game Development</li>
