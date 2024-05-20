@@ -77,13 +77,13 @@ export default function Home() {
       {/* About section start here */}
 
       {/* Home sidebar section start here */}
-      <div className="w-full h-auto pt-24 text-white mx-auto container">
+      <div className="w-full h-auto max-sm:pt-16 pt-24 text-white mx-auto container">
           <HomeSidebar />
       </div>
       {/* Home sidebar section end here */}
 
       {/* Industry card section start here */}
-      <div className="w-full container h-auto text-white mx-auto my-20 py-28">
+      <div className="w-full container h-auto text-white mx-auto my-20 py-20">
         <HomeCard />
       </div>
       {/* Industry card section end here */}

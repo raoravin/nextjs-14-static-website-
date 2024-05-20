@@ -86,7 +86,7 @@ const Content = ({ buttons, activeButtonId }) => {
               <div className="mt-10 max-lg:mt-6  max-lg:text-sm max-lg:h-[440px] h-[495px] overflow-y-scroll hide-scrollbar">
                 <div dangerouslySetInnerHTML={{ __html: activeButton.content[activeContentButtonIndex].html }} />
               </div>
-              <div className="mt-10 max-lg:mt-5 text-lg">
+              <div className="mt-10 max-lg:mt-5 max-lg:text-lg text-xl">
                 <Link href={activeButton.href} className="text-blue-600">See More...</Link>
               </div>
             </div>
@@ -805,7 +805,7 @@ const HomeSidebar = () => {
         <h1 className=" color_2 text-2xl max-sm:text-base max-md:text-lg max-lg:text-xl font-medium">
           Services
         </h1>
-        <p className=" text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-semibold max-sm:my-2 my-5">
+        <p className="text-pretty text-5xl max-sm:text-lg max-md:text-xl max-lg:text-2xl font-medium lg:font-semibold my-5 max-sm:my-2 max-sm:mb-6 mb-14">
           We are a creative agency and offers <br /> Services in various
           technologies
         </p>

@@ -11,9 +11,9 @@ import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="text-white py-16 mt-auto max-sm:px-4 px-10">
-      <div className=" mx-auto container ">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-14 xl:gap-8">
+    <footer className="text-white py-16 mt-auto mx-auto container">
+      <div className=" max-sm:px-4 px-10"> 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-4">SYNCK</h2>
             <p className="mb-4">We provide the expertise and support to propel your business forward.</p>
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className=' max-sm:text-sm'>

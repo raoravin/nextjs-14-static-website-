@@ -1,0 +1,21 @@
+/* width */
+.scroll-nav-card::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .scroll-nav-card::-webkit-scrollbar-track {
+    display: none;
+  }
+   
+  /* Handle */
+  .scroll-nav-card::-webkit-scrollbar-thumb {
+    background: rgb(125, 241, 17); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .scroll-nav-card::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+    border-radius: 15px;
+  }

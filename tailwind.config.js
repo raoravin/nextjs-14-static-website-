@@ -30,6 +30,9 @@ module.exports = {
       fontFamily: {
         'ubuntu': ['Ubuntu', 'sans-serif'],
       },
+      gridTemplateColumns: {
+        'auto-fill-minmax': 'repeat(auto-fill, minmax(200px, 1fr))',
+      },
     },
     
   },

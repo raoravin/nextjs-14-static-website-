@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import DrawerAccordian from "./DrawerAccordian";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import InfoCard, { navItems } from "./cards/Card"; // Import the InfoCard component and navItems
+import { navItems } from "./cards/data/card-data"; // Import the InfoCard component and navItems
+import InfoCard from "./cards/Card";
 
 export default function Header() {
   const pathname = usePathname();
@@ -60,7 +61,7 @@ export default function Header() {
     <>
       <nav className="w-full  absolute mt-6 max-md:px-2 px-5">
         <div className="max-lg:hidden lg:w-[980px] xl:w-[1000px] 2xl:w-[1150px] max-w-[1150px] mx-auto bg-slate-700 text-white rounded-lg">
-          <div className="h-14">
+          <div className="">
             <ul
               className="h-14 flex items-center justify-between gap-5 font-medium tracking-wide text-lg mx-4"
               onMouseLeave={() => setIsCardVisible(false)} // Hide card when mouse leaves the navbar
@@ -135,7 +136,7 @@ export default function Header() {
           </div>
           {isCardVisible && (
             <div
-              className={`bg-slate-700 rounded-b-lg transition-all duration-1000 ease-in-out max-h-screen  opacity-100 overflow-hidden`}
+              className={`bg-slate-700rounded-b-lg transition-all duration-1000 ease-in-out  opacity-100 overflow-hidden`}
               onMouseEnter={() => setIsCardVisible(true)} // Keep card visible when mouse enters the card
               onMouseLeave={() => setIsCardVisible(false)} // Hide card when mouse leaves the card
             >
@@ -146,11 +147,11 @@ export default function Header() {
           )}
         </div>
         <div className="lg:hidden mx-auto bg-slate-700 text-white rounded-lg w-12/12">
-          <div className="flex w-full justify-between px-3 sm:px-5">
-            <div className="h-14 flex items-center">Logo</div>
+          <div className=" max-sm:h-12 h-14 flex w-full justify-between px-3 sm:px-5">
+            <div className="  flex items-center">Logo</div>
             <div
               onClick={showSidebar}
-              className="h-14 flex items-center text-2xl"
+              className=" max-sm:h-12 h-14 flex items-center justify-center text-2xl"
             >
               <FaBars />
             </div>

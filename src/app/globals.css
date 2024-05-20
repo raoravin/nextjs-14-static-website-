@@ -36,6 +36,25 @@
 }
 
 
+.auto-rows-min {
+  grid-auto-rows: min-content;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #2d3748;
+  color: white;
+}
+
+
 body {
     /* font-family: "Ubuntu Sans", sans-serif; */
     font-family: 'Titillium Web', sans-serif;
